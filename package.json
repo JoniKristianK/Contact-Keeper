@@ -1,11 +1,14 @@
 {
-  "name": "Contact-Keeper",
+  "name": "contact-keeper",
   "version": "1.0.0",
   "description": "Contact Keeper (MongoDB, Express, React, Node, JWT Authentication. . . )",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/layout/NavBar';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 import './App.css';
 
 import AuthState from './context/auth/AuthState';
@@ -20,6 +22,8 @@ const App = () => {
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
+                <Route exact path='/register' component={Register} />
+                <Route exact path='/login' component={Login} />
               </Switch>
             </div>
           </>

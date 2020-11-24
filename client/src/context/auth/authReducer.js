@@ -6,7 +6,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERROS,
+  CLEAR_ERRORS,
 } from '../types';
 
 // eslint-disable-next-line
@@ -24,7 +24,7 @@ export default (state, action) => {
       localStorage.setItem('token', action.payload.token);
       return {
         ...state,
-        ...action.payload, //puts the token to the state
+        ...action.payload,
         isAuthenticated: true,
         loading: false,
       };
@@ -41,8 +41,7 @@ export default (state, action) => {
         user: null,
         error: action.payload,
       };
-
-    case CLEAR_ERROS:
+    case CLEAR_ERRORS:
       return {
         ...state,
         error: null,
